@@ -63,7 +63,7 @@ class ViewController: UIViewController {
     @IBAction func pageChange(_ sender: Any) {
         
         index = pageDot.currentPage
-        segment.selectedSegmentIndex=index
+        segment.selectedSegmentIndex = index
         logoImageView.image=UIImage(named: drinks[index])
         drinkLabel.text=shops[index]
         

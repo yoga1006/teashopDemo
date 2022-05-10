@@ -20,9 +20,14 @@
                                 <rect key="frame" x="-13" y="167" width="459" height="1154"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="john" translatesAutoresizingMaskIntoConstraints="NO" id="3ci-IG-lWq">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="john" translatesAutoresizingMaskIntoConstraints="NO" id="3ci-IG-lWq">
                                 <rect key="frame" x="61" y="126" width="267" height="273"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="1cW-6B-9kj" appends="YES" id="tlH-We-kMa"/>
+                                    <outletCollection property="gestureRecognizers" destination="ccA-jl-elr" appends="YES" id="7Kq-X0-qZn"/>
+                                </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zkv-Nx-1bw">
                                 <rect key="frame" x="100" y="540" width="104" height="88"/>
@@ -53,7 +58,6 @@
                                 </segments>
                                 <color key="selectedSegmentTintColor" systemColor="systemBrownColor"/>
                                 <connections>
-                                    <action selector="next:" destination="BYZ-38-t0r" eventType="valueChanged" id="Wk0-uY-DIc"/>
                                     <action selector="segmentChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="GuG-oH-gjh"/>
                                 </connections>
                             </segmentedControl>
@@ -90,6 +94,16 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="1cW-6B-9kj">
+                    <connections>
+                        <action selector="pre:" destination="BYZ-38-t0r" id="xq7-tD-xRc"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="ccA-jl-elr">
+                    <connections>
+                        <action selector="next:" destination="BYZ-38-t0r" id="dAc-Nn-9Ig"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="28.985507246376812" y="54.910714285714285"/>
         </scene>
